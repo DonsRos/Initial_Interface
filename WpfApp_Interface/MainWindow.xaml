@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp_Interface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_Interface"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Приложение для пользователей" Height="600" Width="1000" Background="#996AD6">
+    <Grid>
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="500" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Color="Gold" ShadowDepth="20"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Приветствуем вас!" Width="200" FontWeight="UltraBlack" FontSize="21" Margin="0 0 0 20" HorizontalAlignment="Left" Background="White"/>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Click me!"/>
+                    <Button HorizontalAlignment="Right" Content="Войти" FontSize="15" Style="{StaticResource MaterialDesignFlatButton}"/>
+                </Grid>
+                <TextBox x:Name="textbox_login" materialDesign:HintAssist.Hint="Введите логин" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox x:Name="passbox_password" materialDesign:HintAssist.Hint="Введите пароль" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <PasswordBox x:Name="passbox_password_verify" materialDesign:HintAssist.Hint="Подтвердите пароль" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <TextBox x:Name="textbox_email" materialDesign:HintAssist.Hint="Введите Email" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button Margin="20" FontSize="15" FontFamily="Arial" Click="Button_Reg_Click"> Зарегистрироваться</Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
